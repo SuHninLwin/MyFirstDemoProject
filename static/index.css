@@ -1,0 +1,20 @@
+.shop-name:hover {
+    cursor: pointer;
+}
+
+.nav-link {
+    color: #fc0388;
+}
+
+.nav-link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.nav-item:hover {
+    background-color: white;
+}
+
+.mySlides {
+    display:none;
+}
