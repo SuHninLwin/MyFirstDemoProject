@@ -51,3 +51,7 @@ p {
     top: 3px;
     color: #fc0388;
 }
+
+.show {
+    display:block;
+}

@@ -76,9 +76,14 @@
 
     <div style="background-color: gray;">
         <div class="row">
-            <div class="col-6 col-md-4 d-flex justify-content-center" style="padding-top: 10px; padding-bottom: 10px; background-color: black; color: white;">ABOUT US</div>
-            <div class="col-6 col-md-4 d-flex justify-content-center" style="padding-top: 10px; padding-bottom: 10px; background-color: black; color: white;">Q &#38; A</div>
-            <div class="col-6 col-md-4 d-flex justify-content-center" style="padding-top: 10px; padding-bottom: 10px; background-color: black; color: white;">CONTACT US</div>
+            <div class="col-6 col-md-4 d-flex justify-content-center" id="about-div" style="padding-top: 10px; padding-bottom: 10px; background-color: black; color: white; text-decoration: underline;" onclick="displayAboutUs()">ABOUT US</div>
+            <div class="col-6 col-md-4 d-flex justify-content-center" id="qanda-div" style="padding-top: 10px; padding-bottom: 10px; background-color: black; color: white; text-decoration: underline;" onclick="displayQandA()">Q &#38; A</div>
+            <div class="col-6 col-md-4 d-flex justify-content-center" id="contact-div" style="padding-top: 10px; padding-bottom: 10px; background-color: black; color: white; text-decoration: underline;" onclick="displayContactUs()">CONTACT US</div>
+        </div>
+
+        <div class="row">
+            <div id="aboutDivBody" style="display: none;">hey hey</div>
+            <div id="qandaDivBody" style="display: none;">hey hey hey</div>
         </div>
     </div>
 
@@ -94,7 +99,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
                         <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="w-100"/>
+                            <img src="https://brandirectory-live-public.s3.eu-west-2.amazonaws.com/logos/453b6e78-c197-46e7-9f92-143321bcda45.jpg%3FClarins.jpg" class="w-100"/>
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                             </a>
@@ -102,7 +107,7 @@
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
                         <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                            <img src="https://media.istockphoto.com/photos/various-makeup-products-on-wooden-background-picture-id934807630" class="w-100"/>
+                            <img src="https://deltafonts.com/wp-content/uploads/Elizabeth-Arden-logo.png" class="w-100"/>
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                             </a>
@@ -110,7 +115,7 @@
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
                         <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp" class="w-100"/>
+                            <img src="https://beautiquebeautystudio.ie/wp-content/uploads/2020/10/shop-logos-revlon-professional.jpg" class="w-100"/>
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                             </a>
@@ -118,7 +123,7 @@
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
                         <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp" class="w-100"/>
+                            <img src="https://mengotticouture.com/wp-content/uploads/2022/01/Bourjois.jpg" class="w-100"/>
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                             </a>
@@ -126,7 +131,7 @@
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
                         <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp" class="w-100"/>
+                            <img src="https://cdn.worldvectorlogo.com/logos/l-oreal-professionnel.svg" class="w-100"/>
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                             </a>
@@ -134,7 +139,7 @@
                     </div>
                     <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
                         <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp" class="w-100"/>
+                            <img src="https://1000logos.net/wp-content/uploads/2017/02/Hugo-BOSS-Green-logo.jpg" class="w-100"/>
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                             </a>
@@ -209,9 +214,9 @@
 
     <!-- Scripts -->
     <script>
+        <!-- Sliding images -->
         var myIndex = 0;
         carousel();
-
         function carousel() {
             var i;
             var x = document.getElementsByClassName("mySlides");
@@ -225,6 +230,63 @@
             x[myIndex-1].style.display = "block";  
             setTimeout(carousel, 2500);    
         }
+
+        <!-- Adding div about -->
+        aboutDiv = document.getElementById("about-div");
+        aboutDiv.addEventListener("mouseover",function(){
+            this.style.cursor = "pointer";
+        });
+        function displayAboutUs() {
+            var x = document.getElementById("aboutDivBody");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                aboutDiv.innerHTML = "X";
+                aboutDiv.textDecoration = "none";
+                aboutDiv.style.backgroundColor = "white";
+                aboutDiv.style.color = "black";
+            } else {
+                x.style.display = "none";
+                aboutDiv.innerHTML = "About Us";
+                aboutDiv.textDecoration = "underline";
+                aboutDiv.style.backgroundColor = "black";
+                aboutDiv.style.color = "white";
+            }
+        }
+
+        <!-- Adding div qanda -->
+        qandaDiv = document.getElementById("qanda-div");
+        qandaDiv.addEventListener("mouseover",function(){
+            this.style.cursor = "pointer";
+        });
+        function displayQandA() {
+            var x = document.getElementById("qandaDivBody");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                qandaDiv.innerHTML = "X";
+                qandaDiv.textDecoration = "none";
+                qandaDiv.style.backgroundColor = "white";
+                qandaDiv.style.color = "black";
+            } else {
+                x.style.display = "none";
+                qandaDiv.innerHTML = "Q & A";
+                qandaDiv.textDecoration = "underline";
+                qandaDiv.style.backgroundColor = "black";
+                qandaDiv.style.color = "white";
+            }
+        }
+
+        <!-- Adding div contact -->
+        contactDiv = document.getElementById("contact-div");
+        contactDiv.addEventListener("mouseover",function(){
+            this.style.background = "white";
+            this.style.color = "black";
+            this.style.textDecoration = "underline";
+        });
+        contactDiv.addEventListener("mouseout",function(){
+            this.style.background = "black";
+            this.style.color = "white";
+            this.style.textDecoration = "none";
+        });
     </script>
 
 </body>
