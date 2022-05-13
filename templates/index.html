@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    
     <title>CHERRY - Home Page</title>
     <link rel="stylesheet" href="../static/index.css">
 </head>
@@ -76,14 +76,70 @@
 
     <div style="background-color: gray;">
         <div class="row">
-            <div class="col-6 col-md-4 d-flex justify-content-center" id="about-div" style="padding-top: 10px; padding-bottom: 10px; background-color: black; color: white; text-decoration: underline;" onclick="displayAboutUs()">ABOUT US</div>
-            <div class="col-6 col-md-4 d-flex justify-content-center" id="qanda-div" style="padding-top: 10px; padding-bottom: 10px; background-color: black; color: white; text-decoration: underline;" onclick="displayQandA()">Q &#38; A</div>
-            <div class="col-6 col-md-4 d-flex justify-content-center" id="contact-div" style="padding-top: 10px; padding-bottom: 10px; background-color: black; color: white; text-decoration: underline;" onclick="displayContactUs()">CONTACT US</div>
+            <div class="col-6 col-md-4 d-flex justify-content-center" id="about-div" style="padding-top: 10px; padding-bottom: 10px; background-color: white; color: black; text-decoration: underline; display: block;" onclick="displayAboutUs()">ABOUT US</div>
+            <div class="col-6 col-md-4 d-flex justify-content-center" id="qanda-div" style="padding-top: 10px; padding-bottom: 10px; background-color: white; color: black; text-decoration: underline; display: block;" onclick="displayQandA()">Q &#38; A</div>
+            <div class="col-6 col-md-4 d-flex justify-content-center" id="contact-div" style="padding-top: 10px; padding-bottom: 10px; background-color: white; color: black; text-decoration: underline; display: block;" onclick="displayContactUs()">CONTACT US</div>
         </div>
 
-        <div class="row">
-            <div id="aboutDivBody" style="display: none;">hey hey</div>
-            <div id="qandaDivBody" style="display: none;">hey hey hey</div>
+        <div>
+            <div id="aboutDivBody" style="display: none;">
+                <div class="row d-flex justify-content-center" style="background-color: black; color: white;">
+                    <h4><u>ABOUT US</u></h4>
+                </div>
+            </div>
+
+            <div id="qandaDivBody" style="display: none;">
+                <div class="row d-flex justify-content-center" style="background-color: black; color: white;">
+                    <h4><u>Q &#38; A</u></h4>
+                </div>
+            </div>
+            <div id="contactDivBody" style="display: none;">
+                <div class="row" style="background-color: black; color: white; padding-top: 10px; padding-bottom: 15px;">
+                    <div class="d-flex justify-content-center" style="width: 100%;"><h3>CONTACT US</h3></div>
+                    <div class="d-flex justify-content-center" style="width: 100%;">
+                        <div class="col-6">
+                            <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Damaseintar%20St%20&t=k&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href=""></a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href=""></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
+                        </div>
+                        <div class="col-4" style="background-color: transparent;">
+                            <div class="d-flex justify-content-center" style="width: 100%; padding-top:10px;"><h4><b>ADDRESS INFO</b></h4></div>
+                            <table class="table" style="text-align: left;">
+                                <tr>
+                                    <th scope="row" style="border-color: transparent;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                                        </svg>
+                                    </th>
+                                    <td style="border-color: transparent;">No19. Dama Seintar St. Kyar Kwat Thit Ward, Tamwe Tsp, Yangon.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="border-color: transparent;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                        </svg>
+                                    </th>
+                                    <td style="border-color: transparent;">&#40;+95&#41; 9 510 7310, &#40;+95&#41; 9 444 771 857</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="border-color: transparent;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                        </svg>
+                                    </th>
+                                    <td style="border-color: transparent;">yeelay.yee040@gmail.com, suhninlwin.mm@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="border-color: transparent;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" class="bi bi-telegram" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                                        </svg>
+                                    </th>
+                                    <td style="border-color: transparent;">@Su_Hnin_Lwin</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -93,7 +149,7 @@
 
     <!-- Start of Footer -->
 
-    <footer class="text-center text-white" style="background-color: black;">     
+    <footer class="text-center text-white" style="background-color: black; margin-top: 2px;">     
         <div class="container p-4">
             <section class="">
                 <div class="row">
@@ -241,15 +297,15 @@
             if (x.style.display === "none") {
                 x.style.display = "block";
                 aboutDiv.innerHTML = "X";
-                aboutDiv.textDecoration = "none";
-                aboutDiv.style.backgroundColor = "white";
-                aboutDiv.style.color = "black";
+                aboutDiv.style.backgroundColor = "black";
+                aboutDiv.style.color = "white";
+                aboutDiv.style.textDecoration = "none";
             } else {
                 x.style.display = "none";
                 aboutDiv.innerHTML = "About Us";
-                aboutDiv.textDecoration = "underline";
-                aboutDiv.style.backgroundColor = "black";
-                aboutDiv.style.color = "white";
+                aboutDiv.style.textDecoration = "underline";
+                aboutDiv.style.backgroundColor = "white";
+                aboutDiv.style.color = "black";
             }
         }
 
@@ -263,30 +319,39 @@
             if (x.style.display === "none") {
                 x.style.display = "block";
                 qandaDiv.innerHTML = "X";
-                qandaDiv.textDecoration = "none";
-                qandaDiv.style.backgroundColor = "white";
-                qandaDiv.style.color = "black";
+                qandaDiv.style.backgroundColor = "black";
+                qandaDiv.style.color = "white";
+                qandaDiv.style.textDecoration = "none";
             } else {
                 x.style.display = "none";
                 qandaDiv.innerHTML = "Q & A";
-                qandaDiv.textDecoration = "underline";
-                qandaDiv.style.backgroundColor = "black";
-                qandaDiv.style.color = "white";
+                qandaDiv.style.textDecoration = "underline";
+                qandaDiv.style.backgroundColor = "white";
+                qandaDiv.style.color = "black";
             }
         }
 
         <!-- Adding div contact -->
         contactDiv = document.getElementById("contact-div");
         contactDiv.addEventListener("mouseover",function(){
-            this.style.background = "white";
-            this.style.color = "black";
-            this.style.textDecoration = "underline";
+            this.style.cursor = "pointer";
         });
-        contactDiv.addEventListener("mouseout",function(){
-            this.style.background = "black";
-            this.style.color = "white";
-            this.style.textDecoration = "none";
-        });
+        function displayContactUs() {
+            var x = document.getElementById("contactDivBody");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                contactDiv.innerHTML = "X";
+                contactDiv.style.backgroundColor = "black";
+                contactDiv.style.color = "white";
+                contactDiv.style.textDecoration = "none";
+            } else {
+                x.style.display = "none";
+                contactDiv.innerHTML = "Contact Us";
+                contactDiv.style.textDecoration = "underline";
+                contactDiv.style.backgroundColor = "white";
+                contactDiv.style.color = "black";
+            }
+        }
     </script>
 
 </body>
